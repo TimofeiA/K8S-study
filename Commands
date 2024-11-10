@@ -1,4 +1,6 @@
 kubectl version
+minikube start
 docker version
 docker-compose -v
-git clone https://github.com/jpetazzo/container.training
+git clone https://github.com/jpetazzo/container.training    --k8s learning resourse--
+kubectl get --raw='/readyz?verbose'     --check health--
