@@ -8,3 +8,4 @@ minikube stop
 minikube start --memory 5120 --cpus=4
 minikube start --vm-driver="virtualbox"
 kubectl cluster-info               --information--
+kubectl get nodes
