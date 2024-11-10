@@ -1,0 +1,1 @@
+eksctl create cluster --name myk8s-cluster
