@@ -6,3 +6,4 @@ git clone https://github.com/jpetazzo/container.training    --k8s learning resou
 kubectl get --raw='/readyz?verbose'     --check health--
 minikube stop
 minikube start --memory 5120 --cpus=4
+minikube start --vm-driver="virtualbox"
