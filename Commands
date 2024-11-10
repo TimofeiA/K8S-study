@@ -1,5 +1,5 @@
 kubectl version
-minikube start
+minikube start                                                                                                    
 docker version
 docker-compose -v
 git clone https://github.com/jpetazzo/container.training    --k8s learning resourse--
@@ -9,3 +9,11 @@ minikube start --memory 5120 --cpus=4
 minikube start --vm-driver="virtualbox"
 kubectl cluster-info               --information--
 kubectl get nodes
+
+---Windows---
+"""set HTTP_PROXY=http://<proxy hostname:port>
+set HTTPS_PROXY=https://<proxy hostname:port>
+set NO_PROXY=localhost,127.0.0.1,10.96.0.0/12,192.168.59.0/24,192.168.49.0/24,192.168.39.0/24"""
+
+
+
