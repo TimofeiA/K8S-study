@@ -4,3 +4,5 @@ docker version
 docker-compose -v
 git clone https://github.com/jpetazzo/container.training    --k8s learning resourse--
 kubectl get --raw='/readyz?verbose'     --check health--
+minikube stop
+minikube start --memory 5120 --cpus=4
