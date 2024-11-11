@@ -1,1 +1,2 @@
 eksctl create cluster --name myk8s-cluster
+eksctl create cluster -f mycluster.yaml        --create eks cluster from file--
