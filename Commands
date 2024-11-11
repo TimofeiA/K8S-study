@@ -9,7 +9,8 @@ minikube start --memory 5120 --cpus=4
 minikube start --vm-driver="virtualbox"
 kubectl cluster-info               --information--
 kubectl get nodes
-
+kubectl get nodes --show-labels
+kubectl label node node3 node-role.kubernetes.io/worker=                --how to label the node--
 ---Windows---
 """set HTTP_PROXY=http://<proxy hostname:port>
 set HTTPS_PROXY=https://<proxy hostname:port>
