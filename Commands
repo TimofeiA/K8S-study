@@ -1,4 +1,4 @@
-kubectl version
+kubectl version                                           To COPY PASTE in docker playground  use:  Ctrl + insert and shift + insert
 minikube start                                                                                                    
 docker version
 docker-compose -v
