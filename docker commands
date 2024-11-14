@@ -1,0 +1,2 @@
+sudo docker build -t myk8sapp .        build image with tag(-t)
+docker images
