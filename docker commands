@@ -1,8 +1,8 @@
 sudo docker build -t myk8sapp .       --build image with tag(-t)--
 docker images
-docker tag myk8sapp:latest timothyarch/k8sphp:latest                                                                             Если что-то не получается - помогает дебаг.
-                                                                              Запускаем контейнер:
-                                                                              docker run -d --rm -p 8080:80 adv4000/k8sphp
+docker tag myk8sapp:latest timothyarch/k8sphp:latest                              Если что-то не получается - помогает дебаг.
+docker login                                                                              Запускаем контейнер:
+docker push timothyarch/k8sphp:latest                                         docker run -d --rm -p 8080:80 adv4000/k8sphp
                                                                               Открывем брауза и смотрим на http://IP_SERVER:8080
                                                                               Если что-то пошло не так - 
                                                                               docker ps, смотрим id контейнера,
