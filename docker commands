@@ -1,4 +1,4 @@
-sudo docker build -t myk8sapp .        build image with tag(-t)
+sudo docker build -t myk8sapp .       --build image with tag(-t)--
 docker images
                                                                               Если что-то не получается - помогает дебаг.
                                                                               Запускаем контейнер:
