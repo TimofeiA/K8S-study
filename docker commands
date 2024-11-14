@@ -1,2 +1,13 @@
 sudo docker build -t myk8sapp .        build image with tag(-t)
 docker images
+                                                                              Если что-то не получается - помогает дебаг.
+                                                                              Запускаем контейнер:
+                                                                              docker run -d --rm -p 8080:80 adv4000/k8sphp
+                                                                              Открывем брауза и смотрим на http://IP_SERVER:8080
+                                                                              Если что-то пошло не так - 
+                                                                              docker ps, смотрим id контейнера,
+                                                                              docker exec -it ID /bin/bash
+                                                                              попадаем  в контейнер, и там уже
+                                                                              tail -30 /var/log/httpd/error_log
+                                                                              Ну и в догонку - остановленные контейнеры можно посмотреть docker ps -a.
+                                                                              Очистить остановленные - docker container prune.
