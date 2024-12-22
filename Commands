@@ -10,6 +10,7 @@ minikube start --vm-driver="virtualbox"
 kubectl cluster-info               --information--
 kubectl get nodes
 kubectl get nodes --show-labels
+kubectl describe pod myapp-pod
 kubectl label node node3 node-role.kubernetes.io/worker=                --how to label the node--
 ---Windows---
 """set HTTP_PROXY=http://<proxy hostname:port>
