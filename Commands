@@ -22,3 +22,4 @@ kubectl get pod webapp -o jsonpath='{.spec.containers[*].name}'   ---This comman
 
 
 
+
