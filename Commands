@@ -22,7 +22,7 @@ kubectl get pod webapp -o jsonpath='{.spec.containers[*].name}'   ---This comman
 kubectl create -f webapp-pod.yaml        ---create pod from a file---
 kubectl set image pod/redis  redis=redis:latest  ---edit pod inline---
 kubectl get pods -o wide    ---check wide verson output---
-kubectl run redis --image=redis --dry-run -o yaml       ---output in yaml format while create a pod---
+kubectl run redis --image=redis --dry-run=client -o yaml       ---output in yaml format while create a pod---
 
 
 
