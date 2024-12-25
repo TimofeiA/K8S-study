@@ -28,6 +28,7 @@ kubectl replace -f replica_set.yml           ---replace pods when you changed th
 kubectl logs new-replica-set-cbdfj           ---check logs on a pod---
 kubectl edit replicaset new-replica-set      ---edit replicaset---
 kubectl scale --replicas=6 deployment -l app=myapp  ---scale on air---
+kubectl scale rs new-replica-set --replicas=2       ---scale by resource name---
 ------------------------starting nginx server--------------------------------------
 kubectl run nginx-pod --image=nginx --restart=Never --port=80 -n default
 kubectl expose pod nginx-pod --type=NodePort --port=80 --name=nginx-service   ---externally access allowed---
