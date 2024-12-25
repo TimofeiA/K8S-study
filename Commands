@@ -25,6 +25,7 @@ kubectl get pods -o wide    ---check wide verson output---
 kubectl run redis --image=redis --dry-run=client -o yaml       ---output in yaml format while create a pod---
 kubectl get replicaset       ---get replicaset---
 kubectl replace -f replica_set.yml           ---replace pods when you changed the file parameters---
+kubectl logs new-replica-set-cbdfj           ---check logs on a pod---
 ------------------------starting nginx server--------------------------------------
 kubectl run nginx-pod --image=nginx --restart=Never --port=80 -n default
 kubectl expose pod nginx-pod --type=NodePort --port=80 --name=nginx-service   ---externally access allowed---
