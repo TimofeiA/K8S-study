@@ -36,7 +36,11 @@ kubectl get svc    ---verify the service is created---
 minikube service nginx-service --url       ---to get url---
 kubectl delete service nginx-service  ---to delete service---
 ------------------------------------------------------------------------------------
+Create a deployment
+kubectl create deployment --image=nginx nginx
 
-
+Generate Deployment YAML file (-o yaml). Don't create it(--dry-run)
+kubectl create deployment --image=nginx nginx --dry-run=client -o yaml
+-----------------------------------------------------------------------------------
 
 
