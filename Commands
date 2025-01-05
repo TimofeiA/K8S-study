@@ -35,6 +35,7 @@ kubectl scale --replicas=6 deployment -l app=myapp  ---scale on air---
 kubectl scale rs new-replica-set --replicas=2       ---scale by resource name---
 controlplane ~ ➜  kubectl get namespaces | tail -n +2| wc -l     ---count lines except the first one---
 kubectl get all --selector env=prod --no-headers |wc -l           ---get all resources with label "prod" with no headers and count the lines---
+kubectl get pods --selector "bu=finance,env=prod,tier=frontend"   ---multilabel search---
 ------------------------starting nginx server--------------------------------------
 kubectl run nginx-pod --image=nginx --restart=Never --port=80 -n default
 kubectl expose pod nginx-pod --type=NodePort --port=80 --name=nginx-service   ---externally access allowed---
