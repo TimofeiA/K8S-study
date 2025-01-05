@@ -22,6 +22,7 @@ kubectl get pod webapp -o jsonpath='{.spec.containers[*].name}'   ---This comman
 kubectl create -f webapp-pod.yaml        ---create pod from a file---
 kubectl set image pod/redis  redis=redis:latest  ---edit pod inline---
 kubectl get pods -o wide    ---check wide verson output---
+kubectl get pods -n kube-system  ---check components in the service namespace---
 kubectl get pods --namespace=kube-system     ---get pods for specific namespace(e.g kube-system)---
 kubectl get pods --all-namespaces           ---get pods in all namespaces---
 kubectl config set-contex $(kubectl config current-context) --namespace=dev    ---switch permanently to "dev" namespace---
