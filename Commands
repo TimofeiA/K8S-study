@@ -46,7 +46,6 @@ kubectl delete service nginx-service  ---to delete service---
 ------------------------------------------------------------------------------------
 Create a deployment
 kubectl create deployment --image=nginx nginx
-
 Generate Deployment YAML file (-o yaml). Don't create it(--dry-run)
 kubectl create deployment --image=nginx nginx --dry-run=client -o yaml
 -------------------------------------------------------------------------------------------------------
@@ -59,4 +58,6 @@ kubectl taint nodes node-name key=value:taint-effect  ---taint the node---
 kubetcl taint nodes node1 app=blue:NoSchedule         ---example---
 kubectl taint node controlplane node-role.kubernetes.io/control-plane:NoSchedule-      ---to remove the taint just add "-" at the end---
 kubectl label nodes node-1 size=Large     ---How to label nodes for specific nodeSelector in a pod---
+
+controlplane ~ ➜  kubectl get daemonsets -A   ---check daemonset---
 
