@@ -62,3 +62,6 @@ kubectl label nodes node-1 size=Large     ---How to label nodes for specific nod
 controlplane ~ ➜  kubectl get daemonsets -A   ---check daemonset---
 kubectl get events -o wide                     ---check events---
 kubectl logs my-custom-scheduler --name-space=kube-system      ---check scheduler logs---
+kubectl create configmap my-scheduler-config --from-file /root/my-scheduler-config.yaml -n kube-system    ---create configmap---
+kubectl get configmap my-scheduler-config -n kube-system              ---check configmap---
+
