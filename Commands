@@ -60,4 +60,4 @@ kubectl taint node controlplane node-role.kubernetes.io/control-plane:NoSchedule
 kubectl label nodes node-1 size=Large     ---How to label nodes for specific nodeSelector in a pod---
 
 controlplane ~ ➜  kubectl get daemonsets -A   ---check daemonset---
-
+kubectl get events -o wide                     ---check events---
