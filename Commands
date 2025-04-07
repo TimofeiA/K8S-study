@@ -19,6 +19,7 @@ set NO_PROXY=localhost,127.0.0.1,10.96.0.0/12,192.168.59.0/24,192.168.49.0/24,19
 ----------------------------------------------------------------------------------------------------------------------
 kubectl apply -f /path/to/config-files     ---declarative way to create objects---
 kubectl run nginx --image=nginx        ---create pod from nginx image---
+kubectl run redis --image=redis:alpine --labels="tier=db" 
 kubectl get pod webapp -o jsonpath='{.spec.containers[*].name}'   ---This command lists the names of all the containers in the pod.---
 kubectl create -f webapp-pod.yaml        ---create pod from a file---
 kubectl set image pod/redis  redis=redis:latest  ---edit pod inline---
