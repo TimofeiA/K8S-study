@@ -62,7 +62,7 @@ Create a Service named nginx of type NodePort to expose pod nginx's port 80 on p
 kubectl expose pod nginx --type=NodePort --port=80 --name=nginx-service --dry-run=client -o yaml
 -------------------------------------------------------------------------------------------------------
 kubectl taint nodes node-name key=value:taint-effect  ---taint the node---
-kubetcl taint nodes node1 app=blue:NoSchedule         ---example---
+kubetcl taint nodes node1 app=blue:NoSchedule         ---example--- NoSchedule| PreferNoSchedule | NoExecute
 kubectl taint node controlplane node-role.kubernetes.io/control-plane:NoSchedule-      ---to remove the taint just add "-" at the end---
 kubectl label nodes node-1 size=Large     ---How to label nodes for specific nodeSelector in a pod---
 
