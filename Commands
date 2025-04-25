@@ -17,6 +17,7 @@ kubectl label node node3 node-role.kubernetes.io/worker=                --how to
 set HTTPS_PROXY=https://<proxy hostname:port>
 set NO_PROXY=localhost,127.0.0.1,10.96.0.0/12,192.168.59.0/24,192.168.49.0/24,192.168.39.0/24"""
 ----------------------------------------------------------------------------------------------------------------------
+kubectl get events -o wide   ---check the events---
 kubectl apply -f /path/to/config-files     ---declarative way to create objects---
 kubectl run nginx --image=nginx        ---create pod from nginx image---
 kubectl run redis --image=redis:alpine --labels="tier=db" 
