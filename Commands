@@ -73,4 +73,5 @@ kubectl logs my-custom-scheduler --name-space=kube-system      ---check schedule
 kubectl create configmap my-scheduler-config --from-file /root/my-scheduler-config.yaml -n kube-system    ---create configmap---
 kubectl get configmap my-scheduler-config -n kube-system              ---check configmap---
 kubectl exec kube-apiserver-controlplane -n kube-system -- kube-apiserver -h| grep enable-admission-plug  ---check admission plugins--
+ps -ef | grep kube-apiserver | grep admission-plugins   ---check plugins on pod in kube-adm way---
 
