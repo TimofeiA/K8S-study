@@ -75,3 +75,7 @@ kubectl get configmap my-scheduler-config -n kube-system              ---check c
 kubectl exec kube-apiserver-controlplane -n kube-system -- kube-apiserver -h| grep enable-admission-plug  ---check admission plugins--
 ps -ef | grep kube-apiserver | grep admission-plugins   ---check plugins on pod in kube-adm way---
 
+controlplane ~ ➜  k  -n webhook-demo create secret tls webhook-server-tls \
+> --cert "/root/keys/webhook-server-tls.crt" \
+> --key "/root/keys/webhook-server-tls.key"
+
