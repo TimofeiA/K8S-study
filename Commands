@@ -80,3 +80,16 @@ controlplane ~ ➜  k  -n webhook-demo create secret tls webhook-server-tls \
 > --key "/root/keys/webhook-server-tls.key"
 -------------------------------------------------------------------------------------------------------------
 k get all --all-namespaces -o yaml > all-deploy-services.yaml    ---to save all objects to file---
+etcdctl version
+----To take a snapshot from a running etcd server---:
+    ETCDCTL_API=3 etcdctl \
+      --endpoints=https://127.0.0.1:2379 \
+      --cacert=/etc/kubernetes/pki/etcd/ca.crt \
+      --cert=/etc/kubernetes/pki/etcd/server.crt \
+      --key=/etc/kubernetes/pki/etcd/server.key \
+      snapshot save /backup/etcd-snapshot.db
+
+---to restore---:
+    etcdutl snapshot restore /backup/etcd-snapshot.db \
+      --data-dir /var/lib/etcd-restored
+----------------------------------------------------------------------------------------------------------------
