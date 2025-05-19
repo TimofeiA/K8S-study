@@ -78,4 +78,5 @@ ps -ef | grep kube-apiserver | grep admission-plugins   ---check plugins on pod 
 controlplane ~ ➜  k  -n webhook-demo create secret tls webhook-server-tls \
 > --cert "/root/keys/webhook-server-tls.crt" \
 > --key "/root/keys/webhook-server-tls.key"
-
+-------------------------------------------------------------------------------------------------------------
+k get all --all-namespaces -o yaml > all-deploy-services.yaml    ---to save all objects to file---
