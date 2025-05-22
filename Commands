@@ -95,4 +95,4 @@ etcdctl version
 ----------------------------------------------------------------------------------------------------------------
 kubectl auth can-i delete nodes    ---to check the permissions---
 kubectl auth can-i create pods --as dev-user 
-ubectl describe rolebinding kube-proxy -n kube-system     ---to check rolebindin---
+kubectl describe rolebinding kube-proxy -n kube-system     ---to check rolebindin---
