@@ -93,3 +93,4 @@ etcdctl version
     etcdutl snapshot restore /backup/etcd-snapshot.db \
       --data-dir /var/lib/etcd-restored
 ----------------------------------------------------------------------------------------------------------------
+kubectl auth can-i delete nodes    ---to check the permissions---
