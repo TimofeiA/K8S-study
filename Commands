@@ -98,4 +98,4 @@ kubectl auth can-i create pods --as dev-user
 kubectl get pods --as dev-user
 kubectl describe rolebinding kube-proxy -n kube-system     ---to check rolebindin---
 kubectl create role developer --namespace=default --verb=list,create,delete --resource=pods     ---to create a role with permission---
-kubectl create rolebinding dev-user-binding --namespace=default --role=developer --user=dev-user     ---to bind a role---
+kubectl create rolebinding dev-user-binding --namespace=default --role=developer --user=dev-user     ---to bind a role to user(dev-user here)---
